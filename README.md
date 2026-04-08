@@ -7,10 +7,10 @@ Calculadora em Shell
       cd Projeto 1 - Calculadora
      
   4. Dar permissão de execução ao script:
-      chmod +x calculadora.
+      chmod +x calculadora.sh
       
   5. Executar o script:
-      ./calculadora.
+      ./calculadora.sh
       
   6. Alternativa sem alterar permissão:
       bash calculadora.sh
