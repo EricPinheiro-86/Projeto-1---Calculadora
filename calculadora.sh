@@ -2,6 +2,11 @@
 
 #Calculadora Inteligente
 
+#Função para validar número (inteiro ou decimal)
+eh_numero() {
+  [[ "$1" =~ ^-?[0-9]+([.][0.9]+)?$ ]]
+}
+
 # Entrada do nome do usuário
 read -p "Insira seu nome: " nome_usuario
 echo "Olá $nome_usuario! Bem-vindo a calculadora inteligente"
@@ -18,9 +23,26 @@ do
 
   read -p "$nome_usuario, qual tipo de operação gostaria de realizar? " operacao
 
+  #Validação da operação
+  if ! [[ "$operacao" =~ ^[1-4]$ ]]; then
+    echo "Operação inválida. Escolha entre 1 a 4."
+    continue
+  fi
+
   # Entrada dos números
   read -p "Digite o primeiro número: " num1
   read -p "Digite o segundo número: " num2
+
+  #Validação dos números
+  if ! eh_numero "$num1"; then
+    echo "O primeiro valor não é um número válido."
+    continue
+  fi
+
+   if ! eh_numero "$num2"; then
+    echo "O segundo valor não é um número válido."
+    continue
+  fi
 
   case $operacao in
     1)
