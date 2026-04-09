@@ -1,6 +1,6 @@
 # Projeto 1 - Calculadora
 
-Calculadora em Shell
+#Calculadora em Shell
 
 Como executar
 1. Clonar o repositório
@@ -18,7 +18,7 @@ Como executar
 
    
 
-Calculadora em Python
+#Calculadora em Python
 
 Explicação do código:
 
